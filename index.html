@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CKT DIGITAL - Services</title>
+    <title>CKT DIGITAL - Kharagpur Services</title>
     <style>
-        /* आपका ओरिजिनल स्टाइल बिना किसी बदलाव के */
         * { box-sizing: border-box; transition: background 0.3s, color 0.3s; }
         
         :root { 
@@ -33,26 +32,7 @@
             overflow-x: hidden; 
         }
 
-        /* लोकेशन सिलेक्टर का नया स्टाइल - ओरिजinal थीम के साथ मैच करता हुआ */
-        .location-selector {
-            background: var(--dark-bg);
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            border-bottom: 4px solid var(--light-green);
-        }
-        .select-box {
-            padding: 10px;
-            border-radius: 10px;
-            border: 2px solid var(--light-green);
-            background: var(--card-bg);
-            color: var(--text-color);
-            font-weight: bold;
-            min-width: 150px;
-        }
-
+        /* 1. BRANDING - तेज़ धड़कन (0.8s) */
         .site-branding {
             background-color: var(--dark-bg);
             color: var(--light-green);
@@ -66,6 +46,7 @@
         .branding-title { font-size: clamp(32px, 10vw, 48px); font-weight: 950; margin: 0; }
         .branding-subtitle { font-size: 18px; font-weight: 800; display: block; letter-spacing: 6px; color: #fff; }
 
+        /* 2. मुख्य विज्ञापन पट्टी */
         .ad-container { background-color: var(--ad-black); border-top: 5px solid var(--light-green); border-bottom: 5px solid var(--light-green); width: 100%; }
         .ad-banner { padding: 15px 0 5px 0; overflow: hidden; display: flex; }
         .ad-text { display: inline-block; white-space: nowrap; animation: moveLeft 20s linear infinite; font-size: 18px; font-weight: 900; color: var(--light-green); }
@@ -86,12 +67,14 @@
         body.night-mode .mode-btn { background-color: #333; color: #fff; box-shadow: 0 4px 0 #000; }
         .form-btn { background-color: #673ab7 !important; color: white !important; animation: fastHeartBeat 0.8s ease-in-out infinite; }
 
+        /* 3. MAIN HEADER */
         .main-header { text-align: center; background-color: var(--light-green); padding: 25px 0 10px 0; margin: 0; width: 100%; color: #000; }
         .main-title { font-size: clamp(30px, 8vw, 50px); font-weight: 900; margin: 0; animation: fastHeartBeat 0.8s ease-in-out infinite; }
         .main-subtitle { font-size: 16px; font-weight: 800; color: #333; letter-spacing: 2px; }
 
         @keyframes fastHeartBeat { 0%, 28%, 70% { transform: scale(1); } 14%, 42% { transform: scale(1.08); } }
 
+        /* 4. विज़िटर काउंटर - नई जगह (Header के नीचे) */
         .visitor-counter {
             background: var(--dark-bg);
             color: var(--light-green);
@@ -111,10 +94,12 @@
             vertical-align: middle;
         }
 
+        /* 5. AIRPLANE AD - ✈️ */
         .new-marquee-ad { background-color: #f1f1f1; padding: 12px 0; border-bottom: 3px solid var(--light-green); overflow: hidden; display: flex; white-space: nowrap; color: #333; }
         body.night-mode .new-marquee-ad { background-color: #333; color: #fff; }
         .marquee-content { display: inline-block; animation: moveLeft 15s linear infinite; font-size: 16px; font-weight: 800; }
 
+        /* NAVIGATION & CARDS */
         .nav-container { background-color: var(--dark-bg); padding: 20px 0; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: flex-start; gap: 10px; border-bottom: 4px solid var(--light-green); overflow-x: auto; padding-left: 10px; }
         .tab-btn { font-size: 16px; padding: 12px 20px; font-weight: 900; cursor: pointer; border: none; border-radius: 50px; background-color: var(--light-green); box-shadow: 0 6px 0 var(--green-shadow); white-space: nowrap; }
         .tab-btn.active { background-color: #fff; color: #000; transform: translateY(4px); box-shadow: 0 2px 0 var(--green-shadow); }
@@ -137,102 +122,171 @@
 <body>
 
 <div class="site-branding">
-    <div class="branding-title">💎 CKT DIGITAL</div>
+    <div class="branding-title">💻 CKT DIGITAL</div>
     <span class="branding-subtitle">SERVICE</span>
 </div>
 
-<div class="location-selector">
-    <select id="stateSelect" class="select-box" onchange="updateDistricts()">
-        <option value="">राज्य चुनें (State)</option>
-    </select>
-    <select id="districtSelect" class="select-box">
-        <option value="">ज़िला चुनें (District)</option>
-    </select>
-</div>
-
 <div class="ad-container">
-    <div class="ad-banner"><div class="ad-text">🚀 विज्ञापन: भारत की नंबर 1 शॉप डायरेक्टरी - बेस्ट सर्विस और बेस्ट रेट | संपर्क करें: +91 7908955101 🚀</div></div>
+    <div class="ad-banner"><div class="ad-text">✨ विज्ञापन: खड़गपुर की नंबर 1 शॉप - बेस्ट सर्विस और बेस्ट रेट | संपर्क करें: +91 7908955101 ✨</div></div>
     <div class="ad-static-actions">
         <a href="tel:7908955101" class="ad-static-btn">📞 CALL</a>
         <button class="ad-static-btn mode-btn" onclick="toggleNightMode()" id="modeBtn">🌙 NIGHT</button>
         <a href="https://wa.me/917908955101" class="ad-static-btn">💬 WHATSAPP</a>
-        <a href="#" target="_blank" class="ad-static-btn form-btn">📝 ADD YOUR SHOP</a>
+        <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="ad-static-btn form-btn">📝 ADD YOUR SHOP</a>
         <button onclick="shareMain()" class="ad-static-btn">📤 SHARE SITE</button>
     </div>
 </div>
 
 <div class="main-header">
-    <h1 class="main-title" id="locationDisplay">INDIA</h1>
+    <h1 class="main-title">KHARAGPUR</h1>
     <div class="main-subtitle">SHOPS & SERVICES</div>
 </div>
 
 <div class="visitor-counter">
     <p style="margin:0">TOTAL FOOTFALL:</p>
     <div class="counter-box">
-        <img src="https://counter9.stat.ovh/private/freecounterstat.php?c=89mj8m1w5w727m616lyq2v269v2k253m" border="0" alt="website counter">
+        <a href="https://www.freecounterstat.com" title="website counter"><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=89mj8m1w5w727m616lyq2v269v2k253m" border="0" title="website counter" alt="website counter"></a>
+    </div>
+</div>
+
+<div class="new-marquee-ad">
+    <div class="marquee-content">
+        ✈️ धमाका! खड़गपुर की टॉप सर्विसेज के लिए CKT DIGITAL पर आज ही अपनी शॉप लिस्ट करें! ✈️
     </div>
 </div>
 
 <div class="nav-container" id="tabMenu"></div>
 <div class="container" id="contentArea"></div>
 
+<script src="saloonData.js"></script>
+<script src="autoData.js"></script>
+<script src="doctorData.js"></script>
+<script src="electricianData.js"></script>
+<script src="teacherData.js"></script>
+
 <script>
-    // भारत के राज्यों और जिलों का डेटा
-    const indiaData = {
-        "West Bengal": ["Paschim Medinipur", "Kharagpur", "Kolkata", "Howrah"],
-        "Bihar": ["Patna", "Gaya", "Muzaffarpur", "Bhagalpur"],
-        "Uttar Pradesh": ["Lucknow", "Kanpur", "Varanasi", "Noida"],
-        "Delhi": ["New Delhi", "North Delhi", "South Delhi"]
-        // आप यहाँ और भी राज्य और जिले जोड़ सकते हैं
-    };
-
-    function initLocation() {
-        const stateSelect = document.getElementById('stateSelect');
-        for (let state in indiaData) {
-            let opt = document.createElement('option');
-            opt.value = state;
-            opt.innerHTML = state;
-            stateSelect.appendChild(opt);
-        }
-    }
-
-    function updateDistricts() {
-        const state = document.getElementById('stateSelect').value;
-        const districtSelect = document.getElementById('districtSelect');
-        const locationDisplay = document.getElementById('locationDisplay');
-        
-        districtSelect.innerHTML = '<option value="">ज़िला चुनें (District)</option>';
-        
-        if (state) {
-            locationDisplay.innerText = state.toUpperCase();
-            indiaData[state].forEach(dist => {
-                let opt = document.createElement('option');
-                opt.value = dist;
-                opt.innerHTML = dist;
-                districtSelect.appendChild(opt);
-            });
-        } else {
-            locationDisplay.innerText = "INDIA";
-        }
-    }
-
-    // बाकी सारा पुराना लॉजिक वैसा ही रहेगा
-    const shopData = {}; // यहाँ आपका saloonData, autoData आदि का डेटा आएगा
+    const shopData = { ...saloonData, ...autoData, ...doctorData, ...electricianData, ...teacherData };
 
     function toggleNightMode() {
         document.body.classList.toggle('night-mode');
         const btn = document.getElementById('modeBtn');
-        btn.innerHTML = document.body.classList.contains('night-mode') ? "☀️ LIGHT" : "🌙 NIGHT";
+        if (document.body.classList.contains('night-mode')) {
+            btn.innerHTML = "☀️ LIGHT";
+            localStorage.setItem('theme', 'night');
+        } else {
+            btn.innerHTML = "🌙 NIGHT";
+            localStorage.setItem('theme', 'light');
+        }
     }
 
     window.onload = function() {
-        initLocation();
-        // init(); // आपकी पुरानी डेटा लोडिंग यहाँ कॉल होगी
+        if(localStorage.getItem('theme') === 'night') {
+            document.body.classList.add('night-mode');
+            document.getElementById('modeBtn').innerHTML = "☀️ LIGHT";
+        }
+        init();
     };
 
+    function init() {
+        const tabMenu = document.getElementById('tabMenu');
+        const contentArea = document.getElementById('contentArea');
+        const keys = Object.keys(shopData);
+        
+        keys.forEach((key, index) => {
+            const btn = document.createElement('button');
+            btn.id = `btn-${key}`;
+            btn.className = `tab-btn ${index === 0 ? 'active' : ''}`;
+            btn.innerText = shopData[key].title;
+            btn.onclick = (e) => showSection(key, e.target);
+            tabMenu.appendChild(btn);
+
+            const section = document.createElement('div');
+            section.id = key;
+            section.className = `section ${index === 0 ? 'active' : ''}`;
+            
+            let partnersHtml = '';
+            shopData[key].partners.forEach((p) => {
+                const cardBtn = p.cardLink ? `<a href="${p.cardLink}" target="_blank" class="action-btn" style="background-color: #ff9800; color: white;">🗂️ CARD</a>` : '';
+                const googleMapUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(p.name + ' ' + p.address)}`;
+                const shopId = p.name.replace(/\s+/g, '-').toLowerCase();
+
+                partnersHtml += `
+                    <div class="list-card" id="card-${shopId}">
+                        <h3>${p.name}</h3>
+                        <p>📍 ${p.address}</p>
+                        <p>📞 ${p.mobile}</p>
+                        <div class="btn-group">
+                            <a href="tel:${p.mobile}" class="action-btn">📞 CALL</a>
+                            <a href="https://wa.me/${p.whatsapp}" class="action-btn">💬 WHATSAPP</a>
+                            ${cardBtn}
+                            <a href="${googleMapUrl}" target="_blank" class="action-btn" style="background-color: #ffeb3b;">📍 MAPS</a>
+                            <button onclick="shareShop('${p.name}', '${p.address}', '${key}', '${shopId}')" class="action-btn" style="background-color: #03a9f4; color: white; grid-column: span 2;">📤 SHARE THIS SHOP</button>
+                        </div>
+                    </div>`;
+            });
+
+            section.innerHTML = `
+                <div class="rate-card">
+                    <h2>${shopData[key].icon} ${shopData[key].title}</h2>
+                    <ul class="rate-list">${shopData[key].rates.map(r => `<li>${r}</li>`).join('')}</ul>
+                </div>
+                <input type="text" class="search-bar" placeholder="${shopData[key].title} में खोजें..." onkeyup="filterList('${key}List', this.value)">
+                <div id="${key}List" class="grid-container">${partnersHtml}</div>
+            `;
+            contentArea.appendChild(section);
+        });
+        checkSharedLink();
+    }
+
+    function checkSharedLink() {
+        const hash = window.location.hash.replace('#', '');
+        if (hash) {
+            const parts = hash.split('|');
+            if (shopData[parts[0]]) {
+                showSection(parts[0], document.getElementById(`btn-${parts[0]}`));
+                if (parts[1]) {
+                    setTimeout(() => {
+                        const targetCard = document.getElementById(`card-${parts[1]}`);
+                        if (targetCard) {
+                            targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            targetCard.classList.add('shared-highlight');
+                        }
+                    }, 800);
+                }
+            }
+        }
+    }
+
+    function shareShop(name, address, category, shopId) {
+        const text = `*${name}*\n📍 पता: ${address}\n\nइसे CKT Digital पर देखें:`;
+        const shareUrl = window.location.origin + window.location.pathname + '#' + category + '|' + shopId;
+        if (navigator.share) {
+            navigator.share({ title: name, text: text, url: shareUrl });
+        } else {
+            window.open(`https://wa.me/?text=${encodeURIComponent(text + " " + shareUrl)}`, '_blank');
+        }
+    }
+
+    function showSection(id, btn) {
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        const target = document.getElementById(id);
+        if(target) target.classList.add('active');
+        if(btn) btn.classList.add('active');
+        window.history.pushState(null, null, '#' + id);
+    }
+
     function shareMain() {
-        const text = "CKT Digital - भारत की लोकल सर्विसेज यहाँ देखें:";
+        const text = "CKT Digital - खड़गपुर की लोकल सर्विसेज यहाँ देखें:";
         window.open(`https://wa.me/?text=${encodeURIComponent(text + " " + window.location.href)}`, '_blank');
+    }
+
+    function filterList(listId, query) {
+        const term = query.toLowerCase();
+        const cards = document.querySelectorAll(`#${listId} .list-card`);
+        cards.forEach(card => {
+            card.style.display = card.innerText.toLowerCase().includes(term) ? "block" : "none";
+        });
     }
 </script>
 </body>
